@@ -100,3 +100,12 @@ describe('9. prefer-arrow-callback – countItems', function () {
     expect(result).toEqual({});
   });
 });
+
+describe('6. complexity – getLineWidth', function () {
+  it('should increase width when direction is true', function () {
+    expect(getLineWidth(50, true)).toEqual(51);
+  });
+  it('should decrease width when direction is false', function () {
+    expect(getLineWidth(50, false)).toEqual(49);
+  });
+});

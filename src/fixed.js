@@ -61,3 +61,14 @@ function countItems(data) {
     return obj;
   }, {});
 }
+
+function getLineWidth(currentWidth, direction) {
+  if (currentWidth >= 100 || currentWidth <= 1) {
+    direction = !direction;
+  }
+  if (direction) {
+    return currentWidth + 1;
+  } else {
+    return currentWidth - 1;
+  }
+}
