@@ -63,12 +63,5 @@ function countItems(data) {
 }
 
 function getLineWidth(currentWidth, direction) {
-  if (currentWidth >= 100 || currentWidth <= 1) {
-    direction = !direction;
-  }
-  if (direction) {
-    return currentWidth + 1;
-  } else {
-    return currentWidth - 1;
-  }
+  return direction ? currentWidth + 1 : currentWidth - 1;
 }
