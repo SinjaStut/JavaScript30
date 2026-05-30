@@ -53,7 +53,7 @@ function getTotalYears(inventors) {
 }
 
 function countItems(data) {
-  return data.reduce(function(obj, item) {
+  return data.reduce((obj, item) => {
     if (!obj[item]) {
       obj[item] = 0;
     }
