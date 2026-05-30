@@ -51,3 +51,13 @@ function getTotalYears(inventors) {
   return inventors.reduce((total, inventor) =>
     total + (inventor.passed - inventor.year), 0);
 }
+
+function countItems(data) {
+  return data.reduce(function(obj, item) {
+    if (!obj[item]) {
+      obj[item] = 0;
+    }
+    obj[item]++;
+    return obj;
+  }, {});
+}

@@ -88,3 +88,15 @@ describe('10. arrow-body-style – getTotalYears', function () {
     expect(getTotalYears([])).toEqual(0);
   });
 });
+
+describe('9. prefer-arrow-callback – countItems', function () {
+  it('should count occurrences of each item', function () {
+    const result = countItems(['car', 'car', 'bike']);
+    expect(result.car).toEqual(2);
+    expect(result.bike).toEqual(1);
+  });
+  it('should return empty object for empty array', function () {
+    const result = countItems([]);
+    expect(result).toEqual({});
+  });
+});
