@@ -26,7 +26,6 @@ function getTeamCopy(players) {
 }
 
 function getPersonCopy(person) {
-  const unused = 'I am never used';
   const cap2 = Object.assign({}, person);
   return cap2;
 }
