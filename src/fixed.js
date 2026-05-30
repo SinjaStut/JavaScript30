@@ -48,7 +48,6 @@ function numberWithCommas(x) {
 }
 
 function getTotalYears(inventors) {
-  return inventors.reduce((total, inventor) => {
-    return total + (inventor.passed - inventor.year);
-  }, 0);
+  return inventors.reduce((total, inventor) =>
+    total + (inventor.passed - inventor.year), 0);
 }
