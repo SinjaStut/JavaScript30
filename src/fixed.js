@@ -33,3 +33,12 @@ function getPersonCopy(person) {
 function calculateTotal(prices) {
   return prices.reduce((total, price) => total + price, 0);
 }
+
+const cities = [];
+
+function findMatches(wordToMatch, cities) {
+  return cities.filter(place => {
+    const regex = new RegExp(wordToMatch, 'gi');
+    return place.city.match(regex) || place.state.match(regex);
+  });
+}

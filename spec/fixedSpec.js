@@ -49,3 +49,20 @@ describe('5. no-trailing-spaces – calculateTotal', function () {
     expect(calculateTotal([])).toEqual(0);
   });
 });
+
+describe('7. no-shadow – findMatches', function () {
+  it('should find matching cities', function () {
+    const places = [
+      { city: 'Vienna', state: 'Austria' },
+      { city: 'Berlin', state: 'Germany' }
+    ];
+    const result = findMatches('Vienna', places);
+    expect(result.length).toEqual(1);
+    expect(result[0].city).toEqual('Vienna');
+  });
+  it('should return empty array if no match', function () {
+    const places = [{ city: 'Vienna', state: 'Austria' }];
+    const result = findMatches('Berlin', places);
+    expect(result.length).toEqual(0);
+  });
+});
