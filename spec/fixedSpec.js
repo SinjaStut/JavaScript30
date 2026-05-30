@@ -26,3 +26,17 @@ describe('3. no-console – getTeamCopy', function () {
     expect(result).not.toBe(players);
   });
 });
+
+describe('4. no-unused-vars – getPersonCopy', function () {
+  it('should return a copy of the person object', function () {
+    const person = { name: 'Wes', age: 80 };
+    const result = getPersonCopy(person);
+    expect(result.name).toEqual('Wes');
+    expect(result.age).toEqual(80);
+  });
+  it('should not be the same reference', function () {
+    const person = { name: 'Wes', age: 80 };
+    const result = getPersonCopy(person);
+    expect(result).not.toBe(person);
+  });
+});
