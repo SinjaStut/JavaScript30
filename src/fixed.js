@@ -46,3 +46,9 @@ function findMatches(wordToMatch, allCities) {
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
+
+function getTotalYears(inventors) {
+  return inventors.reduce((total, inventor) => {
+    return total + (inventor.passed - inventor.year);
+  }, 0);
+}

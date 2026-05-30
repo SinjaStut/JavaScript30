@@ -75,3 +75,16 @@ describe('8. semi – numberWithCommas', function () {
     expect(numberWithCommas(100)).toEqual('100');
   });
 });
+
+describe('10. arrow-body-style – getTotalYears', function () {
+  it('should return total years lived by all inventors', function () {
+    const inventors = [
+      { year: 1879, passed: 1955 },
+      { year: 1643, passed: 1727 },
+    ];
+    expect(getTotalYears(inventors)).toEqual(160);
+  });
+  it('should return 0 for empty array', function () {
+    expect(getTotalYears([])).toEqual(0);
+  });
+});

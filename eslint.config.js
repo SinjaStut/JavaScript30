@@ -22,7 +22,7 @@ export default [
       "semi": ["warn", "always"],
       "no-shadow": "warn",
       "curly": "warn",
-      "complexity": ["warn", 5],
+      "complexity": ["warn", 2],
       "no-multiple-empty-lines": "warn",
       "no-trailing-spaces": "warn",
       "prefer-arrow-callback": "warn",
