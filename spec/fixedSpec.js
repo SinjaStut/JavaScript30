@@ -66,3 +66,12 @@ describe('7. no-shadow – findMatches', function () {
     expect(result.length).toEqual(0);
   });
 });
+
+describe('8. semi – numberWithCommas', function () {
+  it('should format number with commas', function () {
+    expect(numberWithCommas(1000)).toEqual('1,000');
+  });
+  it('should handle numbers without commas', function () {
+    expect(numberWithCommas(100)).toEqual('100');
+  });
+});
