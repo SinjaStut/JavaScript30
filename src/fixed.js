@@ -30,6 +30,6 @@ function getPersonCopy(person) {
   return cap2;
 }
 
-function calculateTotal(prices) {   
-  return prices.reduce((total, price) => total + price, 0);   
+function calculateTotal(prices) {
+  return prices.reduce((total, price) => total + price, 0);
 }
