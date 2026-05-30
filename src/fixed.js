@@ -36,8 +36,8 @@ function calculateTotal(prices) {
 
 const cities = [];
 
-function findMatches(wordToMatch, cities) {
-  return cities.filter(place => {
+function findMatches(wordToMatch, allCities) {
+  return allCities.filter(place => {
     const regex = new RegExp(wordToMatch, 'gi');
     return place.city.match(regex) || place.state.match(regex);
   });
