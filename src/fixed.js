@@ -29,3 +29,7 @@ function getPersonCopy(person) {
   const cap2 = Object.assign({}, person);
   return cap2;
 }
+
+function calculateTotal(prices) {   
+  return prices.reduce((total, price) => total + price, 0);   
+}

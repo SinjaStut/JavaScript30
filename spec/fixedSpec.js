@@ -40,3 +40,12 @@ describe('4. no-unused-vars – getPersonCopy', function () {
     expect(result).not.toBe(person);
   });
 });
+
+describe('5. no-trailing-spaces – calculateTotal', function () {
+  it('should return the sum of all prices', function () {
+    expect(calculateTotal([10, 20, 30])).toEqual(60);
+  });
+  it('should return 0 for empty array', function () {
+    expect(calculateTotal([])).toEqual(0);
+  });
+});
