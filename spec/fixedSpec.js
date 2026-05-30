@@ -13,3 +13,16 @@ describe('2. no-var – debounce', function () {
     expect(typeof result).toEqual('function');
   });
 });
+
+describe('3. no-console – getTeamCopy', function () {
+  it('should return a copy of the players array', function () {
+    const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+    const result = getTeamCopy(players);
+    expect(result).toEqual(players);
+  });
+  it('should not be the same reference', function () {
+    const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+    const result = getTeamCopy(players);
+    expect(result).not.toBe(players);
+  });
+});

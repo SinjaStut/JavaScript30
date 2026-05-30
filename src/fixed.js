@@ -19,3 +19,10 @@ function debounce(func, wait = 20, immediate = true) {
     if (callNow) func.apply(context, args);
   };
 }
+
+function getTeamCopy(players) {
+  console.log(players);
+  const team = players.slice();
+  console.log(team);
+  return team;
+}
